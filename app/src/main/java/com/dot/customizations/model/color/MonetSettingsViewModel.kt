@@ -20,6 +20,13 @@ class MonetSettingsViewModel(app: Application) : PreferenceViewModel(app) {
 
         secureSettingsSwitch(
             context,
+            mTitleRes = R.string.system_use_naika_color,
+            mDefault = 1,
+            setting = "monet_engine_custom_color"
+        )
+
+        secureSettingsSwitch(
+            context,
             mTitleRes = R.string.system_black_theme_title,
             mSummaryRes = R.string.system_black_theme_summary,
             mDefault = 0,

@@ -1221,4 +1221,6 @@
     <string name="lockscreen_battery_info_title">Lock screen charging info</string>
     <string name="lockscreen_battery_info_summary">Display negotiated charger max current and voltage, and battery temperature on lock screen while charging</string>
 
+    <string name="system_use_naika_color">Use prebuilt Naika ColorPalette</string>
+
 </resources>
