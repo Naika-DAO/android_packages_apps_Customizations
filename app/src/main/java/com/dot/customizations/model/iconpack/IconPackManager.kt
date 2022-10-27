@@ -80,12 +80,16 @@ class IconPackManager internal constructor(
     }
 
     private fun persistOverlay(toPersist: IconPackOption): Boolean {
-        val value: String = Settings.Secure.getStringForUser(
+        val value: String? = Settings.Secure.getStringForUser(
             mContext.contentResolver,
             Settings.Secure.THEME_CUSTOMIZATION_OVERLAY_PACKAGES, UserHandle.USER_CURRENT
         )
         val json: JSONObject = try {
-            JSONObject(value)
+            if (value != null) {
+                JSONObject(value)
+            } else {
+                JSONObject()
+            }
         } catch (e: JSONException) {
             Log.e(TAG, "Error adding new settings value: ${e.message}".trimIndent())
             return false
