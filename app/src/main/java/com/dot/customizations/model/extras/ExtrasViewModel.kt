@@ -922,6 +922,14 @@ class ExtrasViewModel(app: Application) : PreferenceViewModel(app) {
 
             systemSettingsSwitch(
                 context,
+                mTitleRes = R.string.unlock_scramble_pin_layout_title,
+                mSummaryRes = R.string.unlock_scramble_pin_layout_summary,
+                mDefault = 0,
+                setting = "lockscreen_scramble_pin_layout"
+            )
+
+            systemSettingsSwitch(
+                context,
                 mTitleRes = R.string.lockscreen_battery_info_title,
                 mSummaryRes = R.string.lockscreen_battery_info_summary,
                 mDefault = 1,
